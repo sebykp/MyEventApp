@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />-->
+    <meta http-equiv="Content-Security-Policy" content="default-src *; img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;   style-src  'self' 'unsafe-inline' *">
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <!--<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">-->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Events App</title>
+
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <!--<script src="js/jquery-ui.min.js"></script>-->
+
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+
+ </head>
+<body>
+    <!-- Page starts here -->
+    <div data-role="page" id="page-home">
+        <div data-role="header" id="hdrEvents" name="hdrEvents" data-nobackbtn="true">
+            <h1>Events</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <ul data-role="listview" id="eventsList" data-inset="true">
+            </ul>
+        </div>
+
+        <div data-role="footer" id="ftrEvents" name="ftrEvents" >
+            <div data-role="fieldcontain" style="text-align: center;">
+                <input type="button" id="btnAddEvent" value="Create Event" data-inline="true"/>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="page-event">
+        <div data-role="header" id="hdrMain" name="hdrMain" data-nobackbtn="true">
+            <h1>Add Event</h1>
+        </div>
+        <div data-role="content" id="contentMain" name="contentMain">
+            <form id="formEvent">
+                <div id="shipDiv" data-role="fieldcontain">
+                    <label for="title_event">Title*</label>
+                    <input id="title_event" name="title_event" type="text" />
+                </div>
+                <div id="fnameDiv" data-role="fieldcontain">
+                    <label for="location_event" >Location*</label>
+                    <input id="location_event" name="location_event" type="text" />
+                </div>
+                <div id="lnameDiv" data-role="fieldcontain">
+                    <label for="event_start">Start Date *</label>
+                    <input id="event_start" name="event_start" type="date" />
+                </div>
+                <div id="emailDiv" data-role="fieldcontain">
+                    <label for="event_end">End Date*</label>
+                    <input id="event_end" name="event_end" type="date" />
+                </div>
+                <div id="submitDiv" data-role="fieldcontain">
+                    <input type="button" id="btnCreateEvent" value="Submit" data-inline="true"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

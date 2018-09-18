@@ -1,0 +1,4 @@
+#Tue Sep 18 15:48:08 IST 2018
+base.0=D\:\\MobileApplications\\PhoneGapWorks\\MyCalendarApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
+renamed.0=classes.dex
+file.0=D\:\\MobileApplications\\PhoneGapWorks\\MyCalendarApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0\\classes.dex
